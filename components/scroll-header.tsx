@@ -34,51 +34,49 @@ export function ScrollHeader({ children }: ScrollHeaderProps) {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link
-          href="/"
-          className={`text-2xl font-bold transition-colors duration-300 ${isScrolled ? "text-gray-900" : "text-white"}`}
-        >
-          INDIGENOUS TALENT
-        </Link>
-        <div className="flex items-center gap-8">
-          <nav className="hidden md:flex space-x-8">
-            <Link
-              href="#models"
-              className={`text-sm font-medium tracking-wider transition-colors duration-300 ${
-                isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white/90 hover:text-white"
-              }`}
-            >
-              MODELS
-            </Link>
-            <Link
-              href="#actors"
-              className={`text-sm font-medium tracking-wider transition-colors duration-300 ${
-                isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white/90 hover:text-white"
-              }`}
-            >
-              ACTORS
-            </Link>
-            <Link
-              href="#about"
-              className={`text-sm font-medium tracking-wider transition-colors duration-300 ${
-                isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white/90 hover:text-white"
-              }`}
-            >
-              ABOUT
-            </Link>
-            <Link
-              href="#contact"
-              className={`text-sm font-medium tracking-wider transition-colors duration-300 ${
-                isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white/90 hover:text-white"
-              }`}
-            >
-              CONTACT
-            </Link>
-          </nav>
-          <div className={`transition-colors duration-300 ${isScrolled ? "" : "text-white"}`}>
-            <TimeDisplay isScrolled={isScrolled} />
-          </div>
+      <div className="container mx-auto px-4 py-4 relative flex items-center justify-center">
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link
+            href="/talent"
+            className={`text-sm font-medium tracking-wider transition-colors duration-300 ${
+              isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white/90 hover:text-white"
+            }`}
+          >
+            TALENT
+          </Link>
+          <Link
+            href="/"
+            className={`text-2xl font-bold transition-colors duration-300 ${isScrolled ? "text-gray-900" : "text-white"}`}
+          >
+            INDIGENOUS TALENT
+          </Link>
+          <Link
+            href="/contact"
+            className={`text-sm font-medium tracking-wider transition-colors duration-300 ${
+              isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white/90 hover:text-white"
+            }`}
+          >
+            CONTACT
+          </Link>
+          <Link
+            href="/news"
+            className={`text-sm font-medium tracking-wider transition-colors duration-300 ${
+              isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white/90 hover:text-white"
+            }`}
+          >
+            NEWS
+          </Link>
+          <Link
+            href="/services"
+            className={`text-sm font-medium tracking-wider transition-colors duration-300 ${
+              isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white/90 hover:text-white"
+            }`}
+          >
+            CULTURAL SERVICCES
+          </Link>
+        </nav>
+        <div className={`absolute right-4 transition-colors duration-300 ${isScrolled ? "" : "text-white"}`}>
+          <TimeDisplay isScrolled={isScrolled} />
         </div>
       </div>
     </header>

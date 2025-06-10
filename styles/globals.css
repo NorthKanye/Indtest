@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  /* Font family is set via next/font in the RootLayout */
 }
 
 @layer utilities {

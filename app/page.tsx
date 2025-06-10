@@ -29,14 +29,13 @@ export default function Component() {
 
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl lg:text-7xl font-light mb-6 leading-tight">
-            Celebrating Indigenous
+          <h1 className="text-4xl md:text-6xl font-semibold drop-shadow-md mb-6 leading-tight text-white/90">
+            Showcasing Indigenous
             <br />
             Australian Talent
           </h1>
-          <p className="text-xl lg:text-2xl mb-8 font-light max-w-3xl mx-auto leading-relaxed">
-            Australia's premier agency representing Aboriginal and Torres Strait Islander models, actors, and creative
-            professionals across all industries
+          <p className="text-lg md:text-xl mb-8 font-light max-w-3xl mx-auto leading-relaxed text-white/80">
+            Australia's leading agency representing First Nations models, actors and creatives.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

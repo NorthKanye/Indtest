@@ -17,7 +17,7 @@ export default function Component() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/placeholder.svg?height=1080&width=1920&text=Indigenous+Australian+Model"
+            src="/image2.png?height=1080&width=1920&text=Indigenous+Australian+Model"
             alt="Indigenous Australian talent"
             fill
             className="object-cover"

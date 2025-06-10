@@ -81,7 +81,7 @@ export const talentData: TalentProfile[] = [
     ],
     specialties: ["High Fashion", "Commercial", "Cultural Campaigns", "Runway"],
     languages: ["English", "Basic Wiradjuri"],
-    profileImage: "/placeholder.svg?height=600&width=400&text=Maya",
+    profileImage: "/maya.png",
     coverImage: "/placeholder.svg?height=400&width=800&text=Maya+Cover",
   },
   {
@@ -131,7 +131,7 @@ export const talentData: TalentProfile[] = [
     ],
     specialties: ["Drama", "Indigenous Stories", "Character Acting", "Voice Work"],
     languages: ["English", "Yolŋu Matha"],
-    profileImage: "/placeholder.svg?height=600&width=400&text=Daniel",
+    profileImage: "/daniel.png",
     coverImage: "/placeholder.svg?height=400&width=800&text=Daniel+Cover",
   },
   {
@@ -180,7 +180,7 @@ export const talentData: TalentProfile[] = [
     experience: ["Tourism Australia", "Commonwealth Bank", "Qantas", "Woolworths", "Cultural Tourism Projects"],
     specialties: ["Commercial", "Lifestyle", "Corporate", "Cultural Consultation"],
     languages: ["English", "Basic Kamilaroi"],
-    profileImage: "/placeholder.svg?height=600&width=400&text=Sarah",
+    profileImage: "/sara.png",
     coverImage: "/placeholder.svg?height=400&width=800&text=Sarah+Cover",
   },
   {
@@ -230,7 +230,7 @@ export const talentData: TalentProfile[] = [
     ],
     specialties: ["Cultural Consultation", "Storytelling", "Education", "Voice Work"],
     languages: ["English", "Noongar"],
-    profileImage: "/placeholder.svg?height=600&width=400&text=Marcus",
+    profileImage: "/marcus.png",
     coverImage: "/placeholder.svg?height=400&width=800&text=Marcus+Cover",
   },
 ]

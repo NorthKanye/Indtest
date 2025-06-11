@@ -36,15 +36,29 @@ export default function TalentPage({ params }: TalentPageProps) {
       </div>
 
       {/* Cover Image */}
-      <div className="relative h-64 md:h-80">
-        <Image
-          src={talent.coverImage || "/placeholder.svg"}
-          alt={`${talent.name} cover`}
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-20" />
-      </div>
+
+ <div className="flex h-64 gap-x-2 md:h-96 md:gap-x-4 px-24">
+  {/* First GIF */}
+  
+   <iframe
+    src="https://player.vimeo.com/video/1029084105?background=1"
+    className="h-full w-full object-cover"
+    frameBorder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowFullScreen
+    title="Background video"
+  ></iframe>
+  
+   <iframe
+    src="https://player.vimeo.com/video/1029084105?background=1"
+    className="h-full w-full object-cover"
+    frameBorder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowFullScreen
+    title="Background video"
+  ></iframe>
+ 
+</div>
 
       {/* Profile Content */}
       <div className="container mx-auto px-4 py-8">
@@ -57,19 +71,19 @@ export default function TalentPage({ params }: TalentPageProps) {
                 alt={talent.name}
                 width={400}
                 height={600}
-                className="w-full rounded-lg object-cover mb-6"
+                className="w-full object-cover mb-6"
               />
 
               {/* Contact CTA */}
-              <Card className="mb-6">
-                <CardContent className="p-6 text-center">
+              <Card className="rounded-none mb-6">
+                <CardContent className="rounded-none p-6 text-center">
                   <h3 className="font-medium text-gray-900 mb-4">Interested in booking {talent.name.split(" ")[0]}?</h3>
                   <div className="space-y-3">
-                    <Button className="w-full bg-gray-900 hover:bg-gray-800">
-                      <Mail className="w-4 h-4 mr-2" />
+                    <Button className=" rounded-none w-full bg-gray-900 hover:bg-gray-800">
+                      <Mail className="rounded-none w-4 h-4 mr-2" />
                       Contact Agent
                     </Button>
-                    <Button variant="outline" className="w-full">
+                    <Button variant="outline" className="rounded-none w-full">
                       <Phone className="w-4 h-4 mr-2" />
                       Request Callback
                     </Button>
@@ -78,8 +92,8 @@ export default function TalentPage({ params }: TalentPageProps) {
               </Card>
 
               {/* Stats */}
-              <Card>
-                <CardContent className="p-6">
+              <Card className="rounded-none">
+                <CardContent className=" rounded-none p-6">
                   <h3 className="font-medium text-gray-900 mb-4">MEASUREMENTS</h3>
                   <div className="space-y-2 text-sm">
                     {talent.stats.height && (
@@ -138,11 +152,11 @@ export default function TalentPage({ params }: TalentPageProps) {
             <div className="mb-8">
               <h1 className="text-4xl font-light text-gray-900 mb-2">{talent.name}</h1>
               <div className="flex flex-wrap gap-2 mb-4">
-                <Badge variant="secondary" className="bg-gray-100 text-gray-800">
+                <Badge variant="secondary" className=" rounded-none bg-gray-100 text-gray-800">
                   {talent.category}
                 </Badge>
-                <Badge variant="outline">{talent.location}</Badge>
-                <Badge variant="outline" className="bg-amber-50 text-amber-800 border-amber-200">
+                <Badge variant="outline" className="rounded-none">{talent.location}</Badge>
+                <Badge variant="outline" className="rounded-none bg-amber-50 text-amber-800 border-amber-200">
                   {talent.heritage}
                 </Badge>
               </div>
@@ -159,7 +173,7 @@ export default function TalentPage({ params }: TalentPageProps) {
               <h2 className="text-xl font-medium text-gray-900 mb-4">Specialties</h2>
               <div className="flex flex-wrap gap-2">
                 {talent.specialties.map((specialty, index) => (
-                  <Badge key={index} variant="outline">
+                  <Badge key={index} variant="outline" className="rounded-none">
                     {specialty}
                   </Badge>
                 ))}
@@ -171,7 +185,7 @@ export default function TalentPage({ params }: TalentPageProps) {
               <h2 className="text-xl font-medium text-gray-900 mb-4">Languages</h2>
               <div className="flex flex-wrap gap-2">
                 {talent.languages.map((language, index) => (
-                  <Badge key={index} variant="secondary">
+                  <Badge key={index} variant="secondary" className="rounded-none">
                     {language}
                   </Badge>
                 ))}
@@ -196,13 +210,13 @@ export default function TalentPage({ params }: TalentPageProps) {
               <h2 className="text-xl font-medium text-gray-900 mb-6">Portfolio</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {talent.portfolio.map((item) => (
-                  <Card key={item.id} className="overflow-hidden">
+                  <Card key={item.id} className="rounded-none overflow-hidden">
                     <div className="relative aspect-[3/4]">
-                      <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
+                      <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="rounded-none object-cover" />
                     </div>
-                    <CardContent className="p-4">
+                    <CardContent className="rounded-none p-4">
                       <h3 className="font-medium text-gray-900 mb-1">{item.title}</h3>
-                      <Badge variant="outline" className="text-xs">
+                      <Badge variant="outline" className="rounded-none text-xs">
                         {item.type}
                       </Badge>
                     </CardContent>

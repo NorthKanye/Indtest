@@ -92,3 +92,35 @@ body {
     @apply bg-background text-foreground;
   }
 }
+@layer utilities {
+  .shape-boomerang {
+    position: relative;
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+  }
+
+  /* Create the two "wings" of the boomerang */
+  .shape-boomerang::before,
+  .shape-boomerang::after {
+    content: '';
+    position: absolute;
+    width: 16px; /* Width of each wing */
+    height: 4px;  /* Thickness of each wing */
+    background-color: white;
+    border-radius: 2px;
+    top: 50%;
+    left: 50%;
+  }
+
+  /* Position and rotate the first wing */
+  .shape-boomerang::before {
+    transform-origin: top left;
+    transform: rotate(45deg) translate(-50%, -50%);
+  }
+
+  /* Position and rotate the second wing */
+  .shape-boomerang::after {
+    transform-origin: top right;
+    transform: rotate(-45deg) translate(-50%, -50%);
+  }
+}

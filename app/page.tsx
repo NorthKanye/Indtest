@@ -13,7 +13,9 @@ export default function Component() {
       <ScrollHeader />
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
+      {/* Hero Section */}
+      {/* Hero Section */}
+  <section id="hero-section" className="relative h-screen">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -27,32 +29,54 @@ export default function Component() {
           <div className="absolute inset-0 bg-black bg-opacity-40" />
         </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-semibold drop-shadow-md mb-6 leading-tight text-white/90">
-            Showcasing Indigenous
-            <br />
-            Australian Talent
-          </h1>
-          <p className="text-lg md:text-xl mb-8 font-light max-w-3xl mx-auto leading-relaxed text-white/80">
-            Australia's leading agency representing First Nations models, actors and creatives.
-          </p>
+        {/* Centered Heading Block */}
+        <div className="h-full flex items-center justify-center">
+          <div className="relative z-10 text-white max-w-7xl mx-auto px-4 w-full pb-36">
+            <div className="flex justify-between w-full">
+              {/* Left column of text, aligned to the right */}
+              <div className="space-y-4 text-right">
+                <h1 className="text-4xl md:text-6xl font-bold drop-shadow-md leading-tight text-white/80">
+                  SHOWCASING
+                </h1>
+                <h1 className="text-4xl md:text-6xl font-bold drop-shadow-md leading-tight text-white/80">
+                  AUSTRALIAN
+                </h1>
+              </div>
+              {/* Right column of text, aligned to the left */}
+              <div className="space-y-4 text-left">
+                <h1 className="text-4xl md:text-6xl font-bold drop-shadow-md leading-tight text-white/80">
+                  INDIGENOUS
+                </h1>
+                <h1 className="text-4xl md:text-6xl font-bold drop-shadow-md leading-tight text-white/80">
+                  TALENT
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        {/* Absolutely Positioned Bottom Content */}
+        <div className="absolute bottom-32 left-0 right-0 z-10 px-4">
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 text-lg font-medium tracking-wider"
+              variant="outline"
+              className="rounded-none bg-transparent border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-medium tracking-wider"
             >
               VIEW OUR TALENT
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-medium tracking-wider"
+              className="rounded-none bg-transparent border-white text-white hover:bg-white hover:text-gray-900  px-8 py-4 text-lg font-medium tracking-wider"
             >
               LEARN MORE
             </Button>
           </div>
         </div>
+
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
@@ -61,22 +85,21 @@ export default function Component() {
           </div>
         </div>
       </section>
-
-      {/* Services Section */}
+       {/* Services Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-center text-sm font-medium text-gray-900 tracking-wider mb-12">FEATURED TALENT</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {getAllTalent().map((talent) => (
-              <Card key={talent.slug} className="border-0 shadow-none bg-transparent">
+              <Card key={talent.slug} className="rounded-none border-0 shadow-none bg-transparent">
                 <CardContent className="p-0">
                   <Link href={`/talent/${talent.slug}`}>
                     <Image
                       src={talent.profileImage || "/placeholder.svg"}
                       alt={talent.name}
                       width={300}
-                      height={400}
-                      className="w-full h-80 object-cover rounded-lg mb-4 hover:opacity-90 transition-opacity"
+                      height={500}
+                      className="rounded-none w-full h-80 object-cover  mb-4 hover:opacity-90 transition-opacity"
                     />
                     <h3 className="text-lg font-medium text-gray-900 mb-1">{talent.name}</h3>
                     <p className="text-sm text-gray-600 mb-2">{talent.category}</p>
@@ -89,7 +112,7 @@ export default function Component() {
           <div className="text-center mt-12">
             <Button
               variant="outline"
-              className="border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-8 py-3 text-sm tracking-wider"
+              className=" rounded-none border-black text-black hover:bg-gray-900 hover:text-white px-8 py-3 text-sm tracking-wider"
             >
               VIEW ALL TALENT
             </Button>
@@ -97,8 +120,9 @@ export default function Component() {
         </div>
       </section>
 
+
       {/* Partnership Section */}
-      <section className="py-16">
+      <section className="py-16 bg-gray">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -115,11 +139,11 @@ export default function Component() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=400"
+                src="/service3.png?height=500&width=400"
                 alt="Indigenous talent collaboration"
                 width={400}
                 height={500}
-                className="rounded-lg object-cover w-full"
+                className=" object-cover w-full"
               />
             </div>
           </div>
@@ -152,11 +176,11 @@ export default function Component() {
             <Card className="border-0 shadow-none bg-white">
               <CardContent className="p-0">
                 <Image
-                  src="/placeholder.svg?height=250&width=350"
+                  src="/service.png?height=250&width=350"
                   alt="Cultural Partnerships"
                   width={350}
                   height={250}
-                  className="w-full h-48 object-cover rounded-t-lg"
+                  className="w-full h-48 object-cover rounded-t-lg object-[50%_35%]"
                 />
                 <div className="p-6">
                   <h3 className="font-medium text-gray-900 mb-2">Cultural Partnerships</h3>
@@ -188,6 +212,7 @@ export default function Component() {
           </div>
         </div>
       </section>
+      
 
       {/* Instagram Feed */}
       <section className="py-16">

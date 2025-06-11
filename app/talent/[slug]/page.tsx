@@ -37,28 +37,11 @@ export default function TalentPage({ params }: TalentPageProps) {
 
       {/* Cover Image */}
 
- <div className="flex h-64 gap-x-2 md:h-96 md:gap-x-4 px-24">
-  {/* First GIF */}
-  
-   <iframe
-    src="https://player.vimeo.com/video/1029084105?background=1"
-    className="h-full w-full object-cover"
-    frameBorder="0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowFullScreen
-    title="Background video"
-  ></iframe>
-  
-   <iframe
-    src="https://player.vimeo.com/video/1029084105?background=1"
-    className="h-full w-full object-cover"
-    frameBorder="0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowFullScreen
-    title="Background video"
-  ></iframe>
- 
-</div>
+ <div className="relative h-64 md:h-80">
+         <Image src={talent.coverImage || "/placeholder.svg"} alt={talent.name} fill className="object-cover object-top" />
+         
+        
+         </div>
 
       {/* Profile Content */}
       <div className="container mx-auto px-4 py-8">

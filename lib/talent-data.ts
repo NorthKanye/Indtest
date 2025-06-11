@@ -82,7 +82,7 @@ export const talentData: TalentProfile[] = [
     specialties: ["High Fashion", "Commercial", "Cultural Campaigns", "Runway"],
     languages: ["English", "Basic Wiradjuri"],
     profileImage: "/maya.png",
-    coverImage: "/placeholder.svg?height=400&width=800&text=Maya+Cover",
+    coverImage: "/run2.avif?text=Maya+Cover",
   },
   {
     slug: "daniel-thompson",
